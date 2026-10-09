@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Jura Error 1–5: a termoblokk-család magyarázata"</title>
+<meta name="description" content=""A Jura Error 1–5 kódok mind a termoblokkokhoz, az NTC hőérzékelőkhöz vagy a hőbiztosítékokhoz vezetnek vissza. Kódonkénti bontás és az Error 2 csapdája."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/jura-thermoblock-errors-1-to-5/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"Jura Error 1–5: a termoblokk-család magyarázata"</h1>
+<p class="meta">2026-10-09</p>
+<p>Az 1-től 5-ig számozott Jura hibakódok elsőre véletlenszerű számhalmaznak tűnnek, közös témájuk mégis egy van: a hő. Mindegyik a termoblokkokra — a kompakt, átfolyós fűtőkre, amelyek a főzővizet és a gőzt előállítják — vagy az őket felügyelő hőérzékelőkre és hőbiztosítékos zsinórokra vezethető vissza. Ha egyszer átlátod a rendszert, egyetlen kód megmondja, melyik fűtő elégedetlen, és hogy a gond mérés, hőmérséklet vagy áramellátás.</p>
+<h2>Két fűtő, öt kód</h2>
+<p>A Jura gépekben két termoblokk dolgozik. A kávés termoblokk a főzővizet melegíti, a gőzös termoblokk pedig a gőz- és forróvíz-oldalt táplálja. Mindegyiken ül egy NTC hőérzékelő — egy olyan ellenállás, amelynek értéke a hőmérséklettel változik, és a vezérlőelektronikának jelent —, mindkettőt pedig hőbiztosítékos zsinórok védik, amelyek túlzott melegedésnél megszakítják az áramot. Az Error 1–5 az elektronika módja, hogy közölje: ezek az elemek egyike rosszul van.</p>
+<ul>
+<li><strong>Error 1 és 2</strong> a kávés termoblokk hőérzékelő-körére mutat.</li>
+<li><strong>Error 3 és 4</strong> a gőzös termoblokkra — túl alacsony jelzés, illetve túlmelegedés.</li>
+<li><strong>Error 5</strong> pedig maga a fűtőelem, amely nem teljesít.</li>
+</ul>
+<h2>A kávé oldala</h2>
+<h3>Error 1: kávés termoblokk-hőérzékelő hiba</h3>
+<p>Az <a href="https://hu.codefixcoffee.com/jura/automatic-machines/error-1/">Error 1</a> azt jelenti, hogy a vezérlőelektronika nem kap értelmes jelzést a kávés termoblokk hőérzékelőjéről — az S, X, J és Z családokon ez a klasszikus hőérzékelő-hiba, az F-n és az E80-nál jellemzően sérült hőérzékelő áll mögötte. Egy apró csavar a rendszerben: a hideg autóból vagy garázsból frissen behozott gép ép alkatrészekkel is kódolhat így. Ha meleg gépen jelenik meg, és újraindítás után azonnal visszatér, a hőérzékelő-kör megszakadt — maga a hőérzékelő, a kábele vagy a blokkot tápláló hőbiztosítékos zsinórok.</p>
+<h3>Error 2: megszakadt jel — vagy csak hideg a gép</h3>
+<p>Az <a href="https://hu.codefixcoffee.com/jura/automatic-machines/error-2/">Error 2</a> minden Jura-kód közül a leggyakoribb, és kétarcú természetű. A jóindulatú változat: a gép kb. 10 °C alatt van, és a fűtő szándékosan zárolva van, amíg fel nem melegszik — télen szállított vagy hideg helyiségben tartott gépeknél gyakori. A komoly változat: a kávés termoblokk hőérzékelője vagy a hőbiztosítékos zsinórok megszakadtak.</p>
+<p>Éppen ezért a felmelegítés a diagnózis. Hozd a gépet szobahőre — sok tulajdonos alacsony fokozatú hajszárítóval öt percre a víztartály üregébe fújva melegít, vagy langyos (nem forró) vízzel töltött tartállyal segít —, majd indítsd újra. Ha a kód eltűnik, semmi sem tört el, csak tartsd melegebb helyen a gépet. Ha meleg gépen is megmarad, a hőérzékelő-kör nyitott, és az NTC hőérzékelő valamint a biztosítékzsinórok belülről ellenőrzendők.</p>
+<h3>Hazai tipp: a téli éléskamra-csapda</h3>
+<p>Magyarországon sok háztartásban a kávégép nem a fűtött konyhában, hanem kamrában, nyaralóban vagy hétvégi házban telel, ahol télen akár 10 °C alá is süllyed a hőmérséklet — pontosan az Error 2 jóindulatú változatának feltétele. Mielőtt szerelőt hívnál, vidd a gépet egy meleg szobába, hagyd ott néhány órát, és csak ezután indítsd újra. A hazai vezetékes víz ráadásul nagy területeken kemény, így a mészetlenítést se halogasd: a mészkeményedés az Error 3 és 4 rendszeres előszobása.</p>
+<h2>A gőz oldala</h2>
+<h3>Error 3: a gőzös termoblokk alacsonyat mutat</h3>
+<p>Az <a href="https://hu.codefixcoffee.com/jura/automatic-machines/error-3/">Error 3</a> az Error 1 gőz-oldali tükörképe: a gőzös termoblokk nem jelent hőmérsékletet — a hőérzékelő, a kábel vagy a még mindig túl hideg gép miatt. Egy további szempont: az erős mészkeményedés annyira lelassíthatja a felfűtést, hogy egyes firmware-eken a hőfok-ellenőrzés elbukik, ezért szétszerelés előtt egy teljes mészetlenítés is feltétlenül a teendők közé való. Belül a hőérzékelő-kábelt ott érdemes megnézni, ahol hajlik.</p>
+<h3>Error 4: a gőzös termoblokk túlmelegszik</h3>
+<p>Az <a href="https://hu.codefixcoffee.com/jura/automatic-machines/error-4/">Error 4</a> a komolyan veendő tagja a családnak. A gőzös termoblokk a vártnál magasabb hőfokra futott fel — vagy a hőérzékelő mutat kevesebbet a valósagnál (mészkeményedés szigeteli, korrodált érintkezők), vagy a tápegység-elektronika nem szakította meg a fűtést. A Jura szerint az Error 2 mellett ez a két leggyakoribb javítás. Lehűlés és mészetlenítés után az első csere a hőérzékelő; ha új NTC hőérzékelővel is újra túlmelegszik a blokk, a tápegység nem kapcsolja ki a fűtőelemet, és cserélni kell — számolj 120–250 €-val. Az örökké égő fűtő tűzveszély: amíg ez a kód él, ne hagyd a gépet felügyelet nélkül bedugva.</p>
+<h3>Error 5: a fűtő nem éri el a hőfokot</h3>
+<p>Az <a href="https://hu.codefixcoffee.com/jura/automatic-machines/error-5/">Error 5</a> azt jelenti, hogy a fűtőelem megkapta a parancsot, a hőmérséklet mégsem emelkedett. Jura gépen ez szinte mindig a termoblokkot védő hőbiztosítékos zsinórok — amelyek túlmelegedés után vagy egyszerű öregedéssel égnek el —, a másik lehetőség a halott termoblokk-fűtőelem. A nagyon hideg gép szintén okozhatja, ezért először melegítsd fel. Belül mérd meg mindkét biztosítékzsinórt és a fűtőelemet: amelyik megszakadtat mutat, az a cserélendő alkatrész — utána pedig derítsd ki, miért égtek el a biztosítékok (mészkeményedés, beragadt relé vagy szárazüzem, amikor a tartály kifogyott).</p>
+<h2>Ami a családot összeköti</h2>
+<p>Ebben a családban a hőbiztosítékos zsinórok és az NTC hőérzékelők a visszatérő szereplők — egy eredeti Jura NTC kb. 25–40 €, egy biztosítékzsinór-szett 15–30 €, egy termoblokk pedig 90–180 €. Hőérzékelőcserekor a szakmai gyakorlat a biztosítékzsinórok együttes cseréje. És egy minta, amit érdemes észben tartani: a néhány napon belül újra elégő biztosítékzsinór nem peches új alkatrészt jelent, hanem azt, hogy a tápegység ragadja be a fűtőt.</p>
+<p>Jó tudni, hogy a Jura házak biztonsági csavarokat használnak, a termoblokkokon pedig hálózati feszültség van — ez a család megfelelő felszerelés nélkül műhelymunka. S, Z, GIGA és újabb E-sorozatú gépeken megéri javíttatni; egy tízéves Impressánál viszont az árajánlatot mérlegeld egy felújított gép árával. A modellspecifikus gyári adatokhoz a <a href="https://www.jura.com">Jura hivatalos honlapja</a>, a többi kód kontextusához a <a href="https://hu.codefixcoffee.com/jura/">Jura hibakód-mutató</a> a kiindulópont.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
