@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"De'Longhi General Alarm: mit jelent valójában"</title>
+<meta name="description" content=""A General Alarm a De'Longhi gyűjtőhibája, rejtett kódként 1101 vagy 1512. Mit takar leggyakrabban, a tízperces infúzor-művelet, és mikor állj le."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/delonghi-general-alarm-explained/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/delonghi-general-alarm-explained/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"De'Longhi General Alarm: mit jelent valójában"</h1>
+<p class="meta">2026-10-12</p>
+<p>A Magnifica, Dinamica vagy PrimaDonna kijelzőjén a General Alarm tűnik a legijesztőbbnek, pedig a legkevesebbet árulja el magából — és ez nem véletlen. A De'Longhi gépek többsége hibakódok helyett szöveges üzeneteket mutat: inkább közli, milyen típusú gondot észlelt, minthogy egy szerviztáblázatba való számot dobjon fel. A háttérben ugyanakkor az újabb modellek numerikus kódot is naplóznak — 1101, 1454, 2257 és társai —, amelyeket a szerviz akkor olvas ki, ha a gép asztalra kerül. Nálunk minden De'Longhi oldalon megtalálod mindkét réteget, a szöveget és a rejtett számot egyaránt; a sort a <a href="https://hu.codefixcoffee.com/delonghi/magnifica-dinamica/general-alarm-code-1101-1512/">General Alarm (1101 / 1512) kódos oldal</a> nyitja.</p>
+<h2>Gyűjtőhiba, nem diagnózis</h2>
+<p>A General Alarm lényege, hogy a vezérlőelektronika hibát észlelt, de nem tudja behatárolni, melyik alkatrész a felelős. Ott, ahol a gép számokat is mutat, 1101-es vagy 1512-es kódként kerül a rejtett naplóba. Ez a numerikus napló máshol pontosabb is lehet — a 1454 például a daráló blokkolódásának kódja —, de a General Alarm szándékosan tág, a kijelző pedig szándékosan homályos marad.</p>
+<p>A gyakorlatban ECAM és ESAM gépeken tízesből kilencszer az <strong>infúzor</strong> — a kivehető főzőegység — a ludas. Elakadt, koszos vagy tisztítás után rosszul visszaigazított, esetleg kávépor ülepedett arra a kis optikai érzékelőre, amely a helyzetét figyeli. A második leggyakoribb ok a vízkör mészköve, ami miatt a szivattyúnak erőlködnie kell — a vezérlőelektronika ezt is általános hibaként jelenti, nem pontosként.</p>
+<p>A homályban rejlik a jó hír: a General Alarm túlnyomó többsége tíz perc alatt, ingyen orvosolható.</p>
+<h3>A tízperces rutin</h3>
+<ol>
+<li>Kapcsold ki a gépet a hátsó kapcsolóval, várj 30 másodpercet, majd kapcsolj vissza. Egy egyszeri elektronikus hiba itt magától elszáll.</li>
+<li>Nyisd ki a szervizajtót, nyomd be a két piros gombot, és húzd ki az infúzort.</li>
+<li>Öblítsd folyó víz alatt — szappan nélkül —, közben mozgasd meg kézzel a dugattyút, végül hagyd megszáradni.</li>
+<li>Nézz bele az üregbe, ahonnan az infúzor kijött: egy kis érzékelőablak van ott, egy száraz ronggyal töröld le róla a kávéport.</li>
+<li>Helyezd vissza az infúzort kattanásig, a karját teljesen lenyomva, majd zárd az ajtót, és indítsd újra a gépet.</li>
+</ol>
+<h3>Ha visszajön a riasztás</h3>
+<p>Futtass le egy mészetlenítési ciklust. A meszesedett vízkör akkor is riaszt, ha az infúzor makulátlan, és évesnél idősebb gépeken a mészetlenítés több esetben megoldás, mintsem nem. Ha az infúzor kézzel sem mozdul, vagy repedt tömítést látsz rajta, ne állj tovább bíbelődni: cseréld ki. A szerelvény a típustól függően 7313251451 vagy 7313251441 számú kit, és a csere öt perces munka.</p>
+<h2>Miért szavakat jelenít meg a De'Longhi, nem kódokat</h2>
+<p>A kijelző filozófiája egyszerű: a szó cselekvésre ösztönöz, a szám keresésre késztet. Egy „1101”-en szolgáltatási táblázat nélkül nem tudsz mit kezdeni, a „General Alarm” viszont legalább arra figyelmeztet, hogy állj meg és nézz körül. A rejtett numerikus réteg a táblázattal rendelkező szerelőnek készült — ezért vezetjük fel mi is mindkettőt minden oldalra, hogy ne kelljen választanod.</p>
+<p>A többi De'Longhi üzenet ugyanennek a logikának engedelmeskedik: mindegyik megnevezi, milyen cselekvést vár tőled a gép. A <a href="https://hu.codefixcoffee.com/delonghi/magnifica-dinamica/water-circuit-empty-fill-circuit/">Water Circuit Empty / Fill Circuit</a> akkor jelenik meg, amikor levegő került a szivattyúba, és az nem tud feltöltődni. Az <a href="https://hu.codefixcoffee.com/delonghi/magnifica-dinamica/insert-grounds-container-empty-grounds-container/">Insert Grounds Container</a> mögött gyakran csak annyi áll, hogy a tartó mögötti érintkezők a nedves kávészutat hiányzó tartóként értelmezik. Ezek sem pontos alkatrész-diagnózisok — inkább utasítások.</p>
+<p>Aki az ellenkező szemléletet keresi, nézze meg a Nespressót: a Vertuo gépek a hibák többségét villogó fénymintákkal jelzik szavak helyett, nem véletlenül készült hozzájuk <a href="https://hu.codefixcoffee.com/nespresso/vertuo-machines/blinking-lights/">fényminta-fordító</a>. A De'Longhi megközelítése és a teljes üzenetcsalád a <a href="https://hu.codefixcoffee.com/delonghi/">De'Longhi összefoglaló oldalon</a> található. Ha a használati utasításra vagy a gyári dokumentációra van szükséged, a <a href="https://www.delonghi.com">De'Longhi hivatalos támogatási oldala</a> jó kiindulópont.</p>
+<h2>Mibe kerül</h2>
+<ul>
+<li>A legtöbb esetben semmibe: az öblítés, az érzékelő letörlése és egy újraindítás megoldja.</li>
+<li>Mészetlenítő folyadék, ha a meszesedés a kiváltó ok: körülbelül 10 €.</li>
+<li>Csere infúzor-szerelvény, ha a meglévő repedt vagy beragadt: 35–60 €.</li>
+<li>Garancián kívüli gyártói szervizelés szuperautomata gépen: jellemzően 250–500 €, visszaszállítással; egy alkatrészes hibánál a független kávégép-javítók általában olcsóbbak.</li>
+</ul>
+<h3>Amit itthon érdemes tudni</h3>
+<p>A magyar csapvíz túlnyomórészt kemény, magasabb kalciumtartalommal, ezért a meszesedésre visszavezethető General Alarm itthon hamarabb jelentkezhet, mint lágyvizes országokban. Érdemes a mészetlenítést a gyári intervallumnál sűrűbbre venni, nagyjából két-háromhavonta, vagy a tartályba palackozott, lágy vizet tölteni. A gyári mészetlenítő folyadék a nagyobb hazai webshopokban és márkaszervizekben egyaránt beszerezhető.</p>
+<p>A General Alarm tehát nem halálos ítélet. A gép azt vallja be vele, hogy nem tudja pontosan, mi romlott el — és tízesből kilencszer egy tiszta infúzor meg egy letörölt érzékelő jelenti a teljes választ. Kezdd a fenti rutinnal, haladj sorban, és csak akkor gondolkozz alkatrészen vagy szervizen, ha a riasztás túlélte az öblítést és a mészetlenítést is.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
