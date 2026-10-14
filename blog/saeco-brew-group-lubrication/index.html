@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Saeco/Philips főzőegység-kenés: a hibák felét megoldó rutin"</title>
+<meta name="description" content=""A főzőegység kimosása és kenése Philips és Saeco gépen — az Error 03, 04 és 20 megoldása, és a megfelelő élelmiszer-biztonságú zsír."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/saeco-brew-group-lubrication/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/saeco-brew-group-lubrication/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"Saeco/Philips főzőegység-kenés: a hibák felét megoldó rutin"</h1>
+<p class="meta">2026-10-14</p>
+<p>A főzőegység az a kivehető hengeres egység, amely szinte minden Philips és Saeco kávébabos gép szíve. Fogadja az őrölt kávét, pogácsává sajtolja, átnyomja rajta a forró vizet, majd a felhasznált pogácsát a szartartóba üríti. Ugyanakkor a gépek hibakódjainak meglepően nagy részéhez is köze van: a <a href="https://hu.codefixcoffee.com/philips-saeco/">Philips és Saeco hibakód-összefoglaló</a> fő kódcsaládjai közül nagyjából minden második érinti a főzőegységet — a lerakódástól már mozogni sem tudó csoport (<strong>Error 03</strong>), a nem megfelelően visszaültetett csoport (<strong>Error 04</strong>), a helyzetében nem észlelt csoport (<strong>Error 20</strong>), illetve a daráló tölcsérének tömörödött kávétól való eltömődése, amelyet a csoport kihúzásával tudsz megszüntetni.</p>
+<p>A jó hír, hogy egyetlen tizenöt perces rutin — kivenni, öblíteni, kenni, visszahelyezni — a legtöbbjük mögött álló megoldás.</p>
+<h2>Miért csak félmegoldás a tiszta főzőegység</h2>
+<p>A kávé zsíros. Minden csésze után vékony olaj- és finomszemcseréteg marad a csoport sínein, dugattyúján és tömítésein. Az öblítés a kávéüledéket távolítja el; a gyári zsírral semmit sem kezd, amely a használat hónapjai alatt elkopik. A száraz csoporton a hajtómotornak erőlködnie kell a dugattyú mozgatásával: az egység akadozva indul, félúton elakad, a gép pedig hibát dob — leggyakrabban <a href="https://hu.codefixcoffee.com/philips-saeco/espresso-machines/error-03/">Error 03</a>-at, amelyet a Philips úgy határoz meg, hogy a főzőegység „túl piszkos a megfelelő működéshez".</p>
+<p>A Philips dokumentált megoldása az Error 03-ra az alapos öblítés. A gyakorlatban azonban a tartós megoldás az öblítés <strong>plusz</strong> kenés: egy vékony réteg élelmiszer-biztonságú zsír a vezetősíneken és a dugattyútömítésen szabadon tartja a mechanizmust, és megakadályozza, hogy a kód egy hét múlva visszatérjen. A gépek gyári dokumentációjáért és ápolási ajánlásaiért a <a href="https://www.philips.com">Philips hivatalos támogatási oldala</a> a kiindulópont.</p>
+<h2>A rutin lépésről lépésre</h2>
+<ol>
+<li>Kapcsold ki a gépet, és várj körülbelül húsz másodpercet, amíg teljesen el nem hallgat.</li>
+<li>Nyisd ki a szervizajtót, és csúsztasd ki a főzőegységet — a legtöbb modellen előbb vedd ki a cseppgyűjtőt és a szartartót.</li>
+<li>Öblítsd a csoportot langyos folyó víz alatt alaposan. Ne használj szappant: megtámadja a tömítéseket és leoldja a kenést. Öblítés közben mozgasd kézzel oda-vissza a mechanizmust, majd hagyd szárazra állni.</li>
+<li>Dörzsölj kevés élelmiszer-biztonságú szilikonzsírt az oldalsó vezetősínekre és a dugattyútömítésre. Vékony film elég; a felesleget töröld le.</li>
+<li>Tolj vissza a csoportot a vezetékein kattanásig, zárd be a szervizajtót, és kapcsolj be.</li>
+</ol>
+<h2>Mit jelent itt az Error 03, 04 és 20</h2>
+<ul>
+<li><strong><a href="https://hu.codefixcoffee.com/philips-saeco/espresso-machines/error-03/">Error 03</a> — a főzőegység túl piszkos.</strong> A közvetlen találat: az üledék addig halmozódott, amíg a csoport nem tudja teljesíteni a mozgását. Öblítés, kenés, visszahelyezés — és havonta egy főzőegység-tisztító tableta ciklus, hogy a kód távol maradjon.</li>
+<li><strong><a href="https://hu.codefixcoffee.com/philips-saeco/espresso-machines/error-04/">Error 04</a> — a főzőegység nincs megfelelően behelyezve.</strong> Leggyakrabban tisztítás után következik be, amikor a csoport úgy került vissza, hogy az oldalkarja nem volt alaphelyzetben. Vedd ki újra, ellenőrizd a jelöléseket (a legtöbb modellen nyíl a nyílhoz), nyomd le a tetejét kattanásig, majd illeszd be erőltetés nélkül. A kenés nem javítja a rossz beültetést — de a frissen zsírozott csoport eleve könnyebben kerül a helyére.</li>
+<li><strong><a href="https://hu.codefixcoffee.com/philips-saeco/espresso-machines/error-20/">Error 20</a> — a főzőegység nincs észlelve a helyén.</strong> Itt a gép azt közli, hogy a cseppgyűjtő, a szartartó vagy a szervizajtó nincs rendben ülő helyén, vagy maga a főzőegység akadt el. A dokumentált visszaállítás az, hogy mindent ültess újra, és indítsd újra a gépet; kivehető csoportos modelleken a következő lépés pontosan a fenti rutin.</li>
+</ul>
+<p>Egy kitétel: ha a modellben a főzőegység beépített, nem kivehető, ne erőltesd a szervizajtót, hogy hozzáférj. Az a változat szerelői munka.</p>
+<h2>Milyen zsírt, és mennyit</h2>
+<p>Használj élelmiszer-biztonságú szilikonzsírt. A Philips forgalmaz saját tubust, és bármely élelmiszer-minőségű szilikonzsír ugyanezt a munkát végzi el, körülbelül 8–12 €-ért, évekre elegendő adaggal. Ne helyettesítsd főzőolajjal, olívaolajjal vagy vajjal — avasodnak és beragasztják a mechanizmust —, és petroleumzselét se használj: az nem élelmiszer-biztonságos, és duzzaszthatja a tömítéseket.</p>
+<h3>Amit itthon érdemes tudni</h3>
+<p>Élelmiszer-minőségű szilikonzsírt itthon a szaküzletekben, vas- és barkácsáruházakban és a nagyobb online piactereken egyaránt beszerezhetsz, a Philips gyári tubusa mellett több márkafüggetlen alternatíva is kapható. Vásárlásnál a csomagoláson keresd az élelmiszer-érintkezésre való alkalmasság tanúsítását — erre a gép kávéval érintkező alkatrészeinél nincs kompromisszum. A csere-főzőegység és a zsír beszerzése előtt mindig a gép típusjeligumiját is nézd meg.</p>
+<h2>Milyen gyakran, és mikor nem a zsír a válasz</h2>
+<p>Napi használat mellett öblítsd ki a csoportot hetente, és kenésre nagyjából két-háromhavonta kerüljön sor. Egy csere-főzőegység 40–80 €, Xelsis-osztályú gépeken akár 140 €, miközben a zsiradék kb. 10 € — a karbantartás olcsó biztosítás. Ha az Error 20 tiszta, rendben ülő csoport mellett is fennáll, a főzőegység hajtómotorja vagy a helyzetérzékelő a gyanúsított; az már javítás, nem tisztítás.</p>
+<p>A főzőegység ugyanakkor csak a gép fele. A hibák másik felét a víz oldalán előzheted meg: időzített mészetlenítéssel, és azzal, hogy a mészetlenítési ciklusokat kezdetétől a végéig futni hagyod. A „ciklus sosem fejeződött be” csapda, amely a <a href="https://hu.codefixcoffee.com/delonghi/magnifica-dinamica/descale-light-stays-on-after-descaling/">De'Longhi gépen beragadt mészetlenítési lámpát</a> okozza, a Philips gépeket is eléri.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
