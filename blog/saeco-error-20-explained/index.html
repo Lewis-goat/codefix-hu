@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Saeco 20-as hiba: főzőegység, ajtókapcsolók, és miért fontos, hogy minden a helyén kattanjon"</title>
+<meta name="description" content=""A Saeco 20-as hibakód a főzőegységre vagy az ajtókapcsolókra hívja fel a figyelmet: itt a dokumentált reset, a főzőegység tisztítása és a motor szerepe."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/saeco-error-20-explained/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/saeco-error-20-explained/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/saeco-error-20-explained/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"Saeco 20-as hiba: főzőegység, ajtókapcsolók, és miért fontos, hogy minden a helyén kattanjon"</h1>
+<p class="meta">2026-10-16</p>
+<p>A Philips és a Saeco szuperautomata kávégépeken a 20-as hibakód elsőre komolyabbnak hangzik, mint amennyire a legtöbb esetben valójában az. A LatteGo 2200/3200/4300/5400, az Xelsis, az Incanto és a régebbi Saeco modellek közösen azt az 01-től 22-ig terjedő tartományt használják, amelyből a Xelsis generáció kézikönyvei a 20-ast két irányba terelik: a főzőegység felé, illetve a cseppgyűjtő tálcát, a kávézacc-tartályt és a szervizajtót figyelő kapcsolósor felé. Részletes összefoglalónkat az <a href="https://hu.codefixcoffee.com/philips-saeco/espresso-machines/error-20/">Error 20 referenciaoldalon</a> találja; e bejegyzés azt fejti ki, mitől döntő, hogy minden alkatrész pontosan a helyén ül — és mikor van mélyebb gond a háttérben.</p>
+<h2>Mit jelz valójában a gép</h2>
+<p>A Philips nem tesz közzé kódonkénti táblázatot a szervizkódjairól, ezért a szervizrészlegen kívül senki nem ígérheti meg, hogy minden típuson ugyanazt az alkatrészt nevezi meg a 20-as hiba. A Xelsis-korszak kézikönyvei viszont egyértelműen mutatnak az irányt: az e tartományba eső numerikus kódok arra utalnak, hogy a vezérlőelektronika nem érzékeli a főzőegységet a helyén, vagy hogy egy szervizelem — a cseppgyűjtő tálca, a kávézacc-tartály, a szervizajtó — nincs teljesen behelyezve.</p>
+<p>Minden főzőciklus előtt és közben a gép egy biztonsági kapcsolósort és a főzőegység pozícióérzékelőjét ellenőrzi. Ha bármelyik azt jelenti, hogy valami nincs rendben, a ciklus leáll, és a kijelzőn megjelenik a 20-as hiba:</p>
+<ul>
+<li>a főzőegységnek jelen kell lennie, és a nyugvó helyzetben kell lennie</li>
+<li>a cseppgyűjtő tálcának teljesen be kell csúsznia a helyére</li>
+<li>a kávézacc-tartálynak a tálcára helyezve, kattanásig kell rögzülnie</li>
+<li>a szervizajtónak teljesen zártnak kell lennie</li>
+</ul>
+<p>Ez nem kényeskedés. A szuperautomata a főzőegységet valódi mechanikai ciklusban mozgatja, és nyitott ajtóval vagy félig bekötött egységgel bele sem kezd. A gyakorlatban a 20-as hibák jelentős része egy néhány milliméterrel rövidebbre csúsztatott tálcára vagy nedves kávézacca vezethető vissza, amely érintkezők között hidat képez.</p>
+<h2>A dokumentált reset: öt perc, alkatrész nélkül</h2>
+<ol>
+<li>Kapcsolja ki a gépet, és húzza ki a hálózati dugaszát.</li>
+<li>Vegye ki a cseppgyűjtő tálcát és a kávézacc-tartályt, majd helyezze vissza mindkettőt határozott mozdulattal, kattanásig.</li>
+<li>Zárja be teljesen a szervizajtót.</li>
+<li>Kapcsolja be újra a gépet.</li>
+</ol>
+<p>Ez a visszaállítási eljárás szerepel a kézikönyvben ehhez a hibacsaládhoz, és az újraüléses újraindítás tényleg a legtöbb esetet megoldja. Ha a kód ezután eltűnik, készen van — de azért olvassa el a következő részt is, mert az ismétlődő 20-as hiba mindig valamilyen háttérben álló okra hívja fel a figyelmet.</p>
+<h3>Ha visszatér: tisztítsa meg a főzőegységet</h3>
+<p>Olyan gépeken, amelyeken a főzőegység kivehető (a LatteGo és Incanto modellek többsége), a következő gyanúsított maga az egység:</p>
+<ol>
+<li>Kapcsolja ki a gépet, nyissa ki a szervizajtót, és vegye ki a főzőegységet.</li>
+<li>Öblítse át alaposan langyos vízzel — szappan nélkül —, majd hagyja levegőn megszáradni.</li>
+<li>Kenjen kevés élelmiszer-biztos szilikonzsírt a vezetősínekre és a dugattyú tömítésére.</li>
+<li>Csúsztassa vissza a sínek mentén kattanásig, zárja be az ajtót, és kapcsolja be a gépet.</li>
+</ol>
+<p>Ezek után indítson egy öblítőciklust. Ha a kód eltűnik, futtassa le a gép tisztítóprogramját is: a kávéolajoktól ragacssá vált főzőegység az ismétlődő 20-as hibák leggyakoribb kiváltó oka, és pontosan ez az, amit a tisztítóciklus kezeli. Egy óvatossági megjegyzés: azokon a Xelsis modelleken, amelyekben a főzőegység beépített és nem kivehető, ne erőltesse a szervizajtót, hogy hozzáférjen — a javításnak az a változata műhelymunka.</p>
+<p>A szomszédos kódok is hasonló történetet mesélnek: a 03-as a „főzőegység túl szennyezett" kód, a 04-es pedig a „főzőegység nincs helyesen behelyezve" — a teljes családot a <a href="https://hu.codefixcoffee.com/philips-saeco/">Philips / Saeco gyűjtőoldal</a> fogja össze.</p>
+<h2>Mikor a motor vagy a pozícióérzékelő a hibás</h2>
+<p>Ha a 20-as hiba akkor is fennáll, hogy a tálca, a tartály és az ajtó bizonyítottan a helyén van, az egység pedig tiszta és zsírozott, megváltozik a kép: vagy a főzőegység motorja nem képes végigvinni a ciklust, vagy a pozícióérzékelő nem olvassa vissza azt. Mindkettő belső beavatkozás — a <a href="https://www.philips.com/support">Philips hivatalos támogatási csatornája</a> ezeket szervizbe irányítja —, és egyikhez sincs értelme felhasználói szintű javítási kísérletbe belemenni. Ha kíváncsi, mi lapul a gép belsejében, az <a href="https://www.ifixit.com">iFixit lépésről lépésre dokumentált szétszerelési útmutatói</a> jó kiindulópontok, de a főzőegység-meghajtó cseréje műhelyi feladat.</p>
+<p>Ne keverje össze ezt a másmilyen, szintén komoly Saeco hibacsaláddal. A 02, 10, 15 és 22 a gép belsejében lévő elektronikai, szivattyú- és szelephibák kódja, amelyeket a Philips eleve szervizbe utal. Hasznos támpont az időzítés: a bekapcsoláskor jelentkező kódok többnyire a főzőegység-meghajtóra vagy egy szelepre utalnak, a főzés közben jelentkezők pedig a szivattyúra vagy a nyomási oldalra. A részleteket az <a href="https://hu.codefixcoffee.com/philips-saeco/espresso-machines/error-02-10-15-or-22/">Error 02, 10, 15 és 22 oldal</a> tartalmazza.</p>
+<h2>Milyen költséggel érdemes számolni</h2>
+<ul>
+<li>Szilikonzsír: kb. 10 € — és a legtöbb 20-as hibához valójában ennyi az egyetlen szükséges „alkatrész".</li>
+<li>Csere főzőegység, ha a meglévő sérült: nagyjából 80–140 €.</li>
+<li>Garancián kívüli gyári szerviz szuperautomatáknál: jellemzően 250–500 €, a visszaszállítást is beleértve; önálló kávégép-javítóknál egyetlen alkatrész cseréje általában olcsóbb.</li>
+</ul>
+<p>Xelsis vagy LatteGo osztályú gépnél a javítás megéri — és jó eséllyel soha nem jut el a harmadik pontig. Kezdje az <a href="https://hu.codefixcoffee.com/philips-saeco/espresso-machines/error-20/">Error 20 oldalon</a>, végezze el a resetet a megadott sorrendben, és csak akkor fogjon a telefonhoz, ha már minden tiszta, zsírozott és a helyén kattan.</p>
+<h3>Magyarországi gyakorlati megjegyzés</h3>
+<p>Magyarországon a csapvíz az ország nagy részén — Budapesten is — kemény, magas ásványianyag-tartalmú, ami a kávéolajak mellett felgyorsítja a főzőegység ragacssá válását, ezért érdemes az egységet hetente kiemelni és átöblíteni. A vásárlási számlát őrizze meg: a magyar kellékszavatosság a vásárlástól számított két évig áll fenn, és garanciális szerviz esetén a vásárlás időpontját kell igazolni.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
