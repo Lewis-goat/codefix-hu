@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Nespresso Vertuo villogó fények: gyakorlati kalauz"</title>
+<meta name="description" content=""A Vertuo villogásainak dekódolása szín és darabszám szerint: melegedés, narancs mészetlenítés, piros hibák, és miért csak végül jön az 5 nyomásos reset."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/nespresso-vertuo-blinking-guide/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"Nespresso Vertuo villogó fények: gyakorlati kalauz"</h1>
+<p class="meta">2026-10-17</p>
+<p>A Vertuo géptípusok többsége — Next, Plus, Pop, Evoluo — kijelző nélkül készül, ezért fényekkel beszél: a melegedést, a mészetlenítést és a hibákat egyaránt villogásmintázatok jelzi, és a numerikus 1300-as kódcsalád csak a csatlakoztatott modelleken bukkan fel. A jó hír, hogy ez a nyelv kicsi, a <a href="https://www.nespresso.com">Nespresso hivatalos segítségnyújtási oldalai</a> dokumentálják, és a minták csaknem mindegyike négy dolog egyikére vezethető vissza. A teljes térképet a <a href="https://hu.codefixcoffee.com/nespresso/vertuo-machines/blinking-lights/">villogó fények dekódoló oldalunk</a> tartalmazza; ez itt a rövid, terepi változat.</p>
+<h2>Első lépés: számlálja meg, mielőtt bármihez nyúl</h2>
+<p>A teljes diagnózis a színből, a ritmusból és a számból áll. Mielőtt kihúzna vagy megnyomna bármit, jegyezzen le három dolgot:</p>
+<ul>
+<li>milyen színű a fény</li>
+<li>egyenletesen világít, villog, vagy váltakozó sorozatban jelzett</li>
+<li>csoportonként hány villogás jut, és megismétlődik-e a minta</li>
+</ul>
+<p>Fél percnyi nézelődés megmutatja, melyik családba tartozik a gép — és megóv attól, hogy olyat „javítson", amely csak melegszik.</p>
+<h2>Normál működés: a bekapcsolási sorozat</h2>
+<p>A bekapcsolást közvetlenül követő, sorban vagy váltakozva felvillanó jelzés a felfutási, melegedési mód. Ez nem hiba. Várjon 15–25 másodpercet, amíg a gép eléri a hőmérsékletét, és a fény nyugalmi, készenléti állapotba vált. Csak akkor folytassa az olvasást, ha a minta sosem áll le.</p>
+<h2>A narancssárga család: mészetlenítés</h2>
+<p>A narancssárga fény, bármilyen mintában, a mészetlenítési rendszerhez tartozik — a gép mészetlenítést igényel, éppen futtat egyet, vagy lejártnak ítél egyet.</p>
+<ol>
+<li>Indítsa el a mészetlenítést a gép mészetlenítési módjából, hivatalos Nespresso mészetlenítő szerrel, a kifolyó alá helyezett nagy edénnyel.</li>
+<li>Hagyja a mindkét fázist — mészetlenítés és öblítés — megszakítás nélkül lefutni. A megszakított mészetlenítés a klasszikus módja annak, hogy a gép beragadjon ebbe a módba.</li>
+<li>A végén ürítse ki és töltse újra a víztartályt, majd futtasson még egy öblítést, ha a gép felajánlja.</li>
+</ol>
+<p>A soha véget nem érő narancssárga villogás szinte mindig azt jelenti, hogy egy mészetlenítést elindítottak, de nem fejeztek be. Ilyenkor nem egy újabb reset a megoldás, hanem a ciklus befejezése.</p>
+<p>Egy figyelmeztetés, amit komolyan érdemes venni: ne mészetlenítsen ecettel. Károsítja a vízkört, és elveszítheti azt a segítséget, amelyet a Nespresso egyébként nyújtana. A hivatalos mészetlenítő kb. 10–15 €-ba kerül.</p>
+<h2>Piros fény: hibaállapotok</h2>
+<p>Az egyenletesen vagy ismétlődően piros fény valós hibát jelez — jellemzően túlmelegedést vagy belső hibát.</p>
+<ol>
+<li>Húzza ki a gépet legalább 10 percre. Ha forró volt, hagyja teljesen kihűlni.</li>
+<li>Dugja vissza, és próbálja újra.</li>
+</ol>
+<p>A rendes kihűlés után azonnal visszatérő piros fény már ügyfélszolgálatot igényel. A gyakorlati kimenet itt kedvező: a Nespresso a hibás Vertuo gépeket garanciában jellemzően cseréli, nem javíttatja.</p>
+<h3>Csatlakoztatott modelleken: az 1301–1305 család</h3>
+<p>A csatlakoztatott Vertuo gépek numerikus kódokat is megjeleníthetnek. A tulajdonosok beszámolói következetesen az 1301-hez kötik a mészetlenítési módba ragadt (vagy mészetlenítésre váró) gépet és a kapszulát nem olvasó szenzort, a szomszédos kódok pedig ugyanebbe a családba tartoznak. Ezeket fogadja erős közösségi jelzésnek, nem hivatalos listának — a megoldás amúgy is ugyanaz a néhány lépés. Ha a gép egyértelműen betöltött kapszulát hiányol, vegye le a kapszulatartót, és törölje át a szenzorablakot és a gépfejet, hogy a szenzor ki tudja olvasni a kapszula vonalkódját. A teljes sorrendet az <a href="https://hu.codefixcoffee.com/nespresso/vertuo-machines/1301-1305/">1301–1305 oldal</a> ismerteti.</p>
+<h2>Az 5 nyomásos gyári reset: végső eszköz, nem első lépés</h2>
+<p>A hivatalos gyári visszaállítást éppen azért érdemes ismerni, mert nem szabad elsőként utána nyúlni:</p>
+<ol>
+<li>Állítsa a fogantyút UNLOCKED, azaz nyitott helyzetbe.</li>
+<li>Nyomja meg a gombot 3 másodpercen belül ötször.</li>
+<li>A fény ötször narancssárgán villog a reset megerősítéseként.</li>
+</ol>
+<p>Két okból csak végső eszköz. Egyrészt törli a mészetlenítési emlékeztetőket és a párosítást, vagyis olyan információkat semmisít meg, amelyekre szüksége lehet — másrészt mechanikailag semmit nem javít. Egy gép, amely azért villog narancsban, mert egy mészetlenítés sosem fejeződött be, a reset után is narancsban fog villogni, immár emlékeztető nélkül. Először dekódolja a mintát, futtassa le a minta szerinti mészetlenítést vagy kihűlést, és a resetet tartsogassa annak a gépnek, amelyiknél már nincs kipróbálandó minta.</p>
+<h2>Mivel jár költségben</h2>
+<p>A legtöbb esetben semmivel: a minta dekódolása önmagában a megoldás. Számoljon 10–15 €-val a mészetlenítőre, egyébként pedig semmivel, hacsak a gép nem igényel támogatást — erről szól részletesen, a garanciacseréket is beleértve, a <a href="https://hu.codefixcoffee.com/nespresso/">Nespresso rovatunk</a>. Ha bizonytalan, induljon a <a href="https://hu.codefixcoffee.com/nespresso/vertuo-machines/blinking-lights/">villogó fények útmutatója</a> mintatérképétől, és onnan haladjon lefelé.</p>
+<h3>Magyarországi gyakorlati megjegyzés</h3>
+<p>Magyarországon a csapvíz az ország nagy részén kemény, ezért a Vertuo alap emlékeztetőinél sűrűbb mészetlenítésre lehet szükség, már csak a beragadt mészetlenítési mód elkerülése érdekében is; a hivatalos mészetlenítő folyadék és kiegészítői a Nespresso magyarországi értékesítési csatornáin is beszerezhetők. A gép dobozát és a vásárlási bizonylatot érdemes megőrizni, mert garanciális csere esetén ezt fogják kérni.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
