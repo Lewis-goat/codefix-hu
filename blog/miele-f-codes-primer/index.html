@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Miele F-kódok: alapozó CM és CVA géptulajdonosoknak"</title>
+<meta name="description" content=""Hogyan működik a Miele CM és CVA kávégépek F-kódos öndiagnosztikája, mely vízellátási hibákat javíthatja meg maga, és miért kell szerviz az F77-hez."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/miele-f-codes-primer/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/miele-f-codes-primer/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/miele-f-codes-primer/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"Miele F-kódok: alapozó CM és CVA géptulajdonosoknak"</h1>
+<p class="meta">2026-10-19</p>
+<h2>Hogyan működik a Miele öndiagnosztikája</h2>
+<p>A Miele asztali CM gépei és beépíthető CVA kávégépei folyamatosan felügyelik a saját töltési ciklusaikat, a szelepeket és a főzési alkatrészeket, és ha egy önteszt elbukik, a gép F-kóddal jelzi. A rendszer logikája szokatlanul átlátható, ha egyszer megértette: a kódok olyan hibákra oszlanak, amelyek fizikailag elérhető helyeken vannak — víztartály, ellátó vezeték, szűrő —, és amelyek a gép belsejében rejlenek, ahol a kézikönyv válasza egy áramkör-megszakítás, majd a Miele szerviz.</p>
+<p>Ez a határ érvényes szabály, nem javaslat. A Miele egyértelműen kimondja, hogy a külső burkolat nem nyitható fel: a gépek belső feszültségeket és nyomás alatt álló rendszert tartalmaznak. Egy Miele-tulajdonos igazi tudománya ezért nem az alkatrészdiagnosztika, hanem a szűrés — annak felismerése, mely kódok az öné, és melyek a szervizé. A modellek belső felépítésben eltérnek (egy CM 5510 vagy 6150 asztali egység más gép, mint egy CVA 6401 vagy 6805 beépített), de az F-kódos szemlélet közös, ezért egy alapozó a teljes választékon hasznos. A teljes listához induljon a <a href="https://hu.codefixcoffee.com/miele/">Miele rovatunktól</a>.</p>
+<h2>A barátságos vég: az F10 és F17 vízellátási kódok</h2>
+<p>Az F10 és az F17 közös kézikönyv-bejegyzés alatt fut, és a megfogalmazást érdemes szó szerint ismerni: a gép egyáltalán nem, vagy csak nagyon kevés vizet tud beszívni. Vagyis megpróbált tölteni, és vagy teljesen elbukott, vagy csak csöpögött. Ez a Miele-tábla legkezelhetőbb hibacsaládja, mert a kézikönyvi javítás csaknem minden alkalommal önmagában a teljes megoldás.</p>
+<p>Hová nézzen először, az géptípustól függ:</p>
+<ul>
+<li><strong>Asztali CM gépek:</strong> az ok csaknem mindig a kivehető tartály — üres, rosszul ülő, vagy beragadt szelepű.</li>
+<li><strong>Vezetékes CVA gépek:</strong> a gyanú a gép előtti elzárószelepre és az előtét-szűrőre tolódik át.</li>
+</ul>
+<p>Mindkét típusnál rövid a teendők listája:</p>
+<ol>
+<li>Vegye ki a víztartályt, töltse fel friss, hideg csapvízzel (ne desztillálttal), és helyezze vissza, amíg rögzül — ez szinte szó szerint a kézikönyv megoldása.</li>
+<li>Ellenőrizze a tartály szelepülését: a beragadt vagy szennyezett tömítést öblítse át folyó víz alatt.</li>
+<li>Vezetékes gépnél győződjön meg róla, hogy az elzárószelep teljesen nyitva van-e, és az előtét-szűrő nincs-e eltömődve.</li>
+<li>Ha a hiba visszatér, mészetlenítse a vízbeömlőt — a szelepben lerakódott mész az, ami időnkéntessé teszi ezt a hibát állandó helyett.</li>
+<li>A gép, amely igazolt vízellátás mellett is jelzi a kódot, beömlő szelep- vagy szivattyúvizsgálatot igényel a Miele szerviztől.</li>
+</ol>
+<p>Itt a költség minimális: jellemzően 0 €, és csak akkor merül fel alkatrészár, ha a beömlő szelep valóban tönkrement — nagyjából 30–60 €. Az <a href="https://hu.codefixcoffee.com/miele/cm-cva-machines/f10-f17/">F10 és F17 részletes oldalunk</a> a tartály- és vízvezeték-ellenőrzéseket teljes részletességgel mutatja be.</p>
+<h2>A szervizhatár: az F77 és a belső hibák</h2>
+<p>A tábla másik oldalán ül az F77, a Miele gyűjtő kódja a bekapcsoláskor észlelt belső hibára — a gyakorlatban leggyakrabban a szeleprendszer inicializációs hibájára. A kézikönyv javaslása őszintén jelzi az önjavítás határait:</p>
+<ol>
+<li>Kapcsolja ki a gépet a be-/kikapcsoló érintőszenzorral, majd húzza ki a hálózati dugaszt a fali aljzatból.</li>
+<li>Hagyja kikapcsolva néhány percig; ha az F77 korábban egy rövid kikapcsolás után már visszatért, adjon neki akár egy órát.</li>
+<li>Dugja vissza és kapcsolja be, közben figyelje, hogy a hiba az inicializálásnál azonnal jelentkezik-e, vagy csak ital kérésekor bukik fel.</li>
+</ol>
+<p>Az F77, amely az áramkör-megszakítási kísérlet után is visszatér, alkatrészhiba — szelep, szivattyú vagy a vezérlőelektronika —, és határozottan a Miele szerviz dolga. Hívás előtt jegyezze fel a típusszámot, mert a CM és CVA gépek belsőleg különböznek, és a szervizrájt ez elsőként fogja elkérni. Az <a href="https://hu.codefixcoffee.com/miele/cm-cva-machines/f77/">F77 referenciaoldalunk</a> összefoglalja, mit érdemes ellenőrizni és mire számítani; a gyártó hivatalos támogatása a <a href="https://www.miele.com">Miele támogatási oldalán</a> érhető el.</p>
+<h2>Egy megjegyezhető szabály a kódok szűréséhez</h2>
+<p>Az F-család e két bejegyzésen túl is folytatódik, beleértve a szelep- és főzőegység-hibákat, amelyek ugyanabba a szervizhatárba esnek, mint az F77. A tábla memorizálása helyett alkalmazzon egyetlen szabályt: ha a javítás olyan vízhez nyúl, amelyet lát — tartály, elzárószelep, szűrő —, az az Ön dolga, és a kézikönyv lépései megoldják. Ha a javítás a gép kinyitását jelentené, vagy egy kód a teljes áramkör-megszakítás után is visszatér, az a Miele-é.</p>
+<p>A javításgazdaság is ezt a felosztást támasztja alá. Egy szelepcsere ezeken a gépeken kb. 50–120 €, a vezérlőelektronika ennél többbe kerül, de a CM és CVA rendszerek ára miatt a javítás jellemzően jobban megéri, mint a csere — és az áramkör-megszakítási kísérlet ingyenes, tehát a hívás előtt mindig megér egy próbát. A kódokhoz tartsa könyvjelzők között az <a href="https://hu.codefixcoffee.com/miele/cm-cva-machines/f10-f17/">F10 és F17 oldalt</a> és az <a href="https://hu.codefixcoffee.com/miele/cm-cva-machines/f77/">F77 oldalt</a>: együtt lefedik azokat a hibákat, amelyekkel géptulajdonosként ténylegesen találkozhat.</p>
+<h3>Magyarországi gyakorlati megjegyzés</h3>
+<p>A magyar csapvíz keménysége miatt a vezetékes CVA gépek előtét-szűrőjét érdemes a gyári ütemzésnél sűrűbben ellenőrizni, a tartályos CM gépekbe pedig Miele eredeti vízszűrőt vagy szűrt vizet érdemes használni — ez lassítja a mészlerakódást, és ezzel az F10/F17 jellegű, időnkéntessé váló hibákat. Mielőtt szervizt hívna, jegyezze fel a gép adattábláján lévő típusszámot: a Miele magyarországi ügyfélszolgálata ezt kéri elsőként.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
