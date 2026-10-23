@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"GE mosogatógép C kódok: leeresztési, vízkészülési és fűtési hibák"</title>
+<meta name="description" content=""A GE mosogatógép C1–C8 kódjai a leeresztést, a vízbeeresztést és a fűtést fedik le; a 888 és CFE a vezérlőelektronikát jelzi."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/ge-dishwasher-c-codes/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"GE mosogatógép C kódok: leeresztési, vízkészülési és fűtési hibák"</h1>
+<p class="meta">2026-10-23</p>
+<p>A GE mosogatógépek a hibáikat C-kódokként jelentik a kijelzőn: C1-től C8-ig, emellett H2O a vízkészülési problémákra, illetve 888 vagy CFE, ha maguk a panelek panaszkodnak. A legtöbb gyártóval ellentétben a GE nem ad ki hivatalos kódlistát, így a tulajdonosokra marad, hogy két karaktert párosítsanak a tünethez — némi támpontot a <a href="https://geappliances.com">GE Appliances hivatalos honlapjának</a> terméktámogatása adhat. A <a href="https://hu.codefixcoffee.com/ge/dishwasher/">GE mosogatógép rovatunk</a> minden kódot tárgyal; ez a bejegyzés végigmegy a családokon abban a sorrendben, ahogyan találkozhat velük, és egy szervizmenü-trükkel zár, amellyel kiolvasható az utoljára tárolt hiba.</p>
+<h2>A leeresztés családja: C1–C3</h2>
+<p>Három kód, egy rendszer. A C1 jelentése: a leeresztő szivattyú két percnél tovább futott anélkül, hogy a medencét kiürítette volna (néhány régebbi modellen ragadt gombot jelez); a C2 azt, hogy a szivattyú egyáltalán nem indult el, vagy a vonal teljesen el volt dugulva; a C3 az általános „nem ereszti le rendesen” bejegyzés. A gyanúsítottak listája sosem változik: eltömődött szűrő és szivattyúmedence, gyűrődött leeresztő tömlő, nemrég beszerelt hulladékdaráló, amelyből a csatlakozócsonk fedőbélyegét nem ütötték ki, vagy tönkrement leeresztő szivattyú. Kezdje a szabad munkával a <a href="https://hu.codefixcoffee.com/ge/dishwasher/c1/">C1 oldalon</a>: húzza ki az alsó kosarat, tisztítsa meg a szűrőt és a medencét, és nézze meg a tömlőt a mosogató alatt. A leeresztő szivattyú €40–€80, ha kiderül, hogy zúg vagy néma.</p>
+<h2>Vízbeeresztési hibák: C4, C5 és H2O</h2>
+<ul>
+<li><strong>C4</strong> — túlcsordulás, vagy a gép áramkimaradás után kétszer töltötte fel magát. A beömlő szelep nem zár rendesen, vagy az úszókapcsolót törmelék ragasztotta be. A <a href="https://hu.codefixcoffee.com/ge/dishwasher/c4/">C4 oldalon</a> az úszóellenőrzés található; ha a medence kikapcsolt gépnél is töltődik, a beömlő szelep átereszt, és cserélni kell (€25–€50).</li>
+<li><strong>C5</strong> — alacsony vízszint: a megadott idő alatt nem jött össze elég víz. Részlegesen zárt elzáró csap, eltömődött előszűrő vagy gyenge beömlő szelep.</li>
+<li><strong>H2O</strong> — egyáltalán nincs víz. Mielőtt bármihez nyúl, nézze meg, hogy a mosogató alatti elzáró nyitva van-e, és nem gyűrődött-e a tömlő.</li>
+</ul>
+<h2>Fűtési hibák: C6–C8</h2>
+<p>A C6 azt jelzi, hogy a víz a meghosszabbított fűtési idő letelte után sem érte el a kb. 49 °C-ot (120 °F). Indítás előtt engesse el a konyhai csapot, amíg meleg nem lesz — ha a víz hidegen érkezik, előfordulhat, hogy a fűtőelem egyszerűen nem tudja behozni. Ha az edények hidegen és vizesen jönnek ki, mérjen folytonosságot a fűtőelemen; az elem €30–€60, a hőhatároló termosztát €10–€20. A C7 a vízhőmérséklet-érzékelő (NTC hőérzékelő) körének hibája — kilazult dugasz vagy olcsó szonda, bár egyes modelleken ugyanez a kód a zavarosságérzékelőt fedi. A C8 jellemzően mechanikus, nem hőtani ok: az adagolókanalat nem tudta kinyitni, mert egy rosszul betöltött edény útban volt, vagy a kiszáradt mosogatószer beleragadt a zárba.</p>
+<h2>888 és CFE: a panelek kódjai</h2>
+<p>Amikor a hiba elektronikai és nem hidraulikai, a GE kerek szavú. A <a href="https://hu.codefixcoffee.com/ge/dishwasher/888/">888</a> azt jelenti, hogy a fő vezérlőelektronika megbukott a saját öntesztjén — gyakran egy viharból jövő feszültségcsúcs írja felül egy memóriaregiszterét, néha pedig szivárgás nedvesíti be a panelt. A <a href="https://hu.codefixcoffee.com/ge/dishwasher/cfe/">CFE</a> azt, hogy az ajtón ülő kezelőpanel és a főpanel megszűnt beszélni egymással, jellemzően az ajtópánt környékén kidörzsölt kábelszett vagy nedves csatlakozó miatt. Mindkettő automatamegszakítós újraindítással kezdődik, és panellel végződik, ha a kód visszatér: €90–€200 a fő vezérlőelektronika, €60–€120 a kezelőpanel.</p>
+<h2>A szervizmenü trükkje: az utolsó hiba kiolvasása</h2>
+<p>Egy mosogatógép, amely hetek óta leállásokkal dolgozik, gyakran pontosan akkor nem mutat semmit, amikor az ember elé áll. A panel emlékszik — a legtöbb GE mosogatógépen meg is lehet kérdezni:</p>
+<ol>
+<li>Nyissa ki teljesen az ajtót.</li>
+<li>Tartsa nyomva a Start gombot öt másodpercig a szervizmenübe lépéshez.</li>
+<li>Azokon a modelleken, ahol a kijelző az ajtó díszléce mögé rejtve van, nyomja egyszerre a Select Cycle és a Start gombot öt másodpercig.</li>
+<li>Olvassa le a kijelzőről az utolsó tárolt hibát, majd csukja be az ajtót.</li>
+<li>A panel alaphelyzetbe tételéhez kapcsolja ki az automata megszakítón 60 másodpercre.</li>
+</ol>
+<p>Jegyezze fel a kódot, törölje, és indítson egy programot: egy három hete tárolt C3 plusz egy mai friss C3 valódi leeresztési hiba, nem véletlen egyezés.</p>
+<h3>Magyarországi vásárlóknak: ellenőrizze a típustáblát</h3>
+<p>A GE mosogatógépek nálunk jellemzően amerikai importból kerülnek a konyhákba, és a típusok többsége 120 V, 60 Hz hálózatra készült. A magyar 230 V, 50 Hz hálózaton az adattábla szerinti feszültség nélkül a gép nem üzemel biztonságosan: a 120 V-os példányhoz megfelelő teljesítményű transzformátor kell, és az 50 Hz-en forgó motorok, szivattyúk viselkedése is eltérhet. Mielőtt bármit javítana vagy alkatrészt vásárolna hozzá, olvassa le az ajtó szélén lévő típustáblát, és győződjön meg róla, hogy a gép paraméterei összeegyeztethetők-e az itthoni hálózattal.</p>
+<h2>Mibe kerülnek a javítások</h2>
+<p>Hozzávetőleg minden C-kód javítása egy szivattyú, egy szelep, egy érzékelő vagy egy adagoló — €10 és €80 közötti alkatrészek —, plusz a saját munka, ha vállalja az áramtalanítást és egy panel levételét. Kivétel a vezérlőelektronika €90–€200 közötti árával. Egy házhoz hívott gépszerelő diagnózisa €120–€250 plusz az alkatrész — ez a paneles kódoknál megéri, egy eltömődött szűrőnél ritkán szükséges.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
