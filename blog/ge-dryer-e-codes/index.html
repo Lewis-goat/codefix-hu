@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"GE szárítógép E-kódok: termisztorok, hőbiztosítékok és a fordulatszámjeladó"</title>
+<meta name="description" content=""GE szárítógép E-kódok: E1, E3–E6, E4, E8, E11 — ajtókapcsoló, termisztorok, hőbiztosíték és motor, évjárat-csapdákkal és árakkal."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/ge-dryer-e-codes/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/ge-dryer-e-codes/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"GE szárítógép E-kódok: termisztorok, hőbiztosítékok és a fordulatszámjeladó"</h1>
+<p class="meta">2026-10-24</p>
+<p>A GE azon kevés nagy háztartásigép-gyártó közé tartozik, amelyik nem tart fenn hivatalos hibakód-listát a szárítógépeihez. Az E-kódok léteznek, a vezérlőelektronika tárolja is őket — csak senki nem magyarázza el a tulajdonosnak, mit jelentenek. A rendszer mégis átlátható: a kódok négy terület köré tömörülnek, nevezetesen az ajtós áramkör, a két hőmérséklet-érzékelő, a fűtés biztonsági kioldói, valamint a meghajtómotor a fordulatszámjeladójával. A <a href="https://hu.codefixcoffee.com/ge/dryer/">GE szárítógép rovatunk</a> kódonként részletesen tárgyalja mindet; ez a bejegyzés azt mutatja meg, hogyan áll össze a család egésszé, és mely évjáratoknál rejlenek a csapdák. Tájékozódni a <a href="https://www.geappliances.com">GE Appliances hivatalos honlapján</a> is érdemes, például a használati utasításoknál.</p>
+<h2>Olvassa ki először a tárolt kódot</h2>
+<p>2016 utáni GTD és GFD gépeken a legutóbb tárolt hibát maga is lekérdezheti. Kapcsolja ki a szárítógépet, nyomja le egyszerre a <strong>Signal</strong> és a <strong>Temp</strong> gombot, tartsa öt másodpercig a szervizmódhoz, és a kijelzőn megjelenik a friss hiba. SmartHQ-képes modelleknél az alkalmazás is listázza a tárolt kódokat. Ha csak a vezérlőelektronikát szeretné nullázni, húzza ki a gép dugóját öt percre.</p>
+<h2>E1: az ajtókapcsoló</h2>
+<p>Az <a href="https://hu.codefixcoffee.com/ge/dryer/e1/">E1</a> azt jelenti, hogy a vezérlőelektronika zártnak nem látja az ajtót. Ez jellemzően mechanikus, nem elektronikai hiba: kopott ajtózár, behajlított zárónyelv vagy egy már nem kattanó mikrokapcsoló.</p>
+<ul>
+<li>Nyomja határozottan be az ajtót, és indítsa újra — a félig beakasztott ajtó a leggyakoribb ok.</li>
+<li>Nézze meg az ajtó zárónyelvét: a behajlott vagy letört fület cserélni kell.</li>
+<li>Áramtalanítás után szerelje le az előlapot, és ellenőrizze az ajtókapcsoló csatlakozóját; amelyik kapcsoló megnyomásra már nem kattan, cserére szorul, €10–€25-ös alkatrészáron.</li>
+</ul>
+<h2>E3–E6: a termisztorok</h2>
+<p>Két NTC hőérzékelő (termisztor) őrzi a légáram hőmérsékletét: a bemeneti a fűtőelem házán, a kimeneti a ventilátorházon ül. Az <a href="https://hu.codefixcoffee.com/ge/dryer/e3-to-e6/">E3–E6 család</a> akkor lép fel, ha a vezérlőelektronika egyiküket szakadtnak vagy zárlatosnak látja. A gyakorlatban a laza, korrodált kábelcsatlakozás ugyanannyi esetet okoz, mint maga az elromlott érzékelő — és egy teljesen eltömődött szellőzőcső is képes egy egészséges gépet túlmelegíteni idáig.</p>
+<ol>
+<li>Húzza ki a gépet 30 másodpercre, majd indítsa újra.</li>
+<li>Tisztítsa meg a szűrőt, és győződjön meg róla, hogy a szellőzőcső nem szűkült-e el.</li>
+<li>Nyissa fel a gépházat, és nézze után a termisztorok csatlakozóinak és kábelözésének laza vagy korrodált érintkezőit.</li>
+<li>Mérje meg a termisztort multiméterrel: szobahőmérsékleten kb. 10 kΩ az egészséges érték; szakadt érzékelőt cseréljen.</li>
+</ol>
+<p>A cserealkatrész €10–€25. Néhány típuson az E6 nem termisztor-, hanem légáramlás-hibakód, ezért rendelés előtt ellenőrizze a saját modellje kódlistáját.</p>
+<h2>E4: a hőbiztosíték</h2>
+<p>Az <a href="https://hu.codefixcoffee.com/ge/dryer/e4/">E4</a> a „nem fűt” jelzés: a dob forog, a ruha mégis vizes marad, mert egy biztonsági hőbiztosíték kiégett. A biztosíték sosem ok nélkül hal meg — a szűrőn vagy a szellőzőcsövön át nem távozó levegő engedte a fűtőelemet túlmelegedni. Előbb a légáramlást hozza rendbe, különben az új biztosíték is kiég, és soha ne hidalja át a hőbiztosítékot: ez az alkatrész az, amely egy valódi túlmelegedést megakadályoz abban, hogy tűzzé fajuljon.</p>
+<ol>
+<li>Tisztítsa meg a szűrőt és a szabadba vezető teljes szellőzőszakaszt.</li>
+<li>Mérje meg a hőbiztosítékot és a fűtőelemházán ülő hőhatároló termosztátot; amelyik szakadt, azt cserélje ki.</li>
+<li>Futtasson egy rövid programot rövid időre leválasztott szellőzővel, hogy lássa, visszatér-e a meleg, majd csatlakoztassa vissza.</li>
+</ol>
+<p>A hőbiztosíték €5–€15, a hőhatároló termosztát €10–€25.</p>
+<h2>E8 és E11: a fordulatszámjeladó és a motor</h2>
+<p>Az <a href="https://hu.codefixcoffee.com/ge/dryer/e8/">E8</a> a korszerű GE szárítógépeken a fordulatszámjeladó (tachometer) kódja: a vezérlőelektronika bekapcsolta a motort, de sebesség-visszajelzést sosem kapott. Az ok lehet a jeladó laza kábelezése, egy beragadt dob — lecsúszott szíj vagy a dob mögé került tárgy —, de a jeladó vagy maga a motor elromlása is. Mivel a tach a motoregység részét képezi, a bizonyított jeladóhiba egységes motorcserét jelent, €80–€150-ért; maga a szíj €15–€25.</p>
+<p>Az E11 a szomszédos panasz: a motor nem azt teszi, amit a vezérlőelektronika kér — kopott szíj, megakadt dobgörgő vagy a motor indítókapcsolója, illetve maga a motor a hibás. Fordítsa meg kézzel a dobot: a nehézkes járás görgőkre vagy csapágyakra gyanakszik, nem a motorra. A szíj levétele után zümmögő, de el nem induló motor cserére szorul; a görgőszett €20–€40.</p>
+<h2>Évjáratok szerinti csapdák</h2>
+<p>Három dologba szoktak belecsúszni a tulajdonosok. Először is: ugyanaz a szám nem minden gépen ugyanaz a hiba — egyes régebbi és kombi modelleken az E8 dobvilágítás- vagy leeresztési hibát jelent, nem fordulatszámjeladót, ezért alkatrészvásárlás előtt azonosítsa a saját szárítógépét. Másodszor: az E6 az egyik típuson légáramlási, a másikon termisztor-kód. Harmadszor: a fenti Signal+Temp szervizmód a 2016 utáni GTD/GFD gépekre vonatkozik — a korábbi modelleknél csak arra támaszkodhat, amit a kijelző a hiba pillanatában mutatott. A családhoz tartozik még az E7, amely azt jelzi, hogy a gép nem látja a táp mindkét fázisát, valamint az E14, a kezelőpanel beragadt gombja; egyik sem fűtési hiba.</p>
+<h2>Mibe kerül a javítás?</h2>
+<p>Az érzékelő- és kapcsolószintű javítások olcsók: ajtókapcsoló €10–€25, termisztor €10–€25, hőbiztosíték €5–€15, szíj €15–€25, dobgörgő €20–€40. A drága tétel a meghajtómotor, €80–€150 — egy idősebb gépnél ez már mérlegelés kérdése, nem magától értetődő döntés. Szerelő kiszállása diagnózissal és alkatrésszel együtt kb. €120–€250; a motor körüli munkáknál megéri, ha nem szívesen nyitogatná a gépházat.</p>
+<h3>Magyarországi használat: hálózat és szellőzés</h3>
+<p>Hazánkba a GE szárítógépek jellemzően amerikai importként érkeznek, és a típustöbbség 120/240 V, 60 Hz hálózatra készült — az itthoni 230 V, 50 Hz rendszertől eltérő paraméterekkel, így a bekötésüket bízza szakképzett villanyszerelőre. Panelházakban sokszor nincs mód szabadba menő szellőzésre, ott viszont épp a hosszú, áthajlított szellőzőcső válik az E3–E6 és E4 kódok leggyakoribb kiváltójává. Ahol csak lehet, alakítson ki rövid, egyenes kivezetést, és a szűrőt minden program után tisztítsa meg.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
