@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"A mészetlenítés, rendesen elmagyarázva"</title>
+<meta name="description" content=""Mit tesz a vízkő a termoblokkokkal és szelepekkel, miért rossz az ecet, citromsav vagy tejsav, és milyen gyakran kell mészetleníteni."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/descaling-science/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/descaling-science/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/descaling-science/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"A mészetlenítés, rendesen elmagyarázva"</h1>
+<p class="meta">2026-10-27</p>
+<p>Minden kávégép-hibalistának van egy uralkodó gyökérok: a vízkő. A kemény víz oldott kalciumot és magnéziumot szállít; ha ezt a vizet felmelegítik, a karbonátok kicsapódnak, és a gép legforróbb fémdarabjára rakódnak. Ennyi az egész vízkő — mégis az oldalon tárgyalt kódok aránytalanul nagy részének ez ül a hátterében: fűtőtest-hibák, szelephibák, töltési gondok és beragadt mészetlenítés-lámpák egyaránt. Ráadásul ez az egyetlen hibacsalád, amelynek €10-es megoldása van.</p>
+<h2>Mit művel a vízkő egy termoblokkban?</h2>
+<p>A termoblokk egy tömeges fémdarab, amelyben szűk csatornán ázva át a víz melegszik fel a csésze felé menet. A vízkő erre a csatornafalra rakódik — a kalcium-karbonát pedig kitűnő hőszigetelő, és pontosan ez a baj.</p>
+<ul>
+<li><strong>A felfűtés lelassul.</strong> A fűtőelem tovább dolgozik a célhőfok eléréséért, és a vastag vízkő egyes gépeknél annyira lassítja a melegedést, hogy a vezérlőelektronika saját hőellenőrzése hibát ír — a Jura termoblokk-kódcsaládja kifejezetten a vízkőhöz köti ezeket a kódokat.</li>
+<li><strong>Az érzékelő hazudik.</strong> A vízkőréteg megváltoztatja, milyen gyorsan érzékeli a blokkban ülő NTC hőérzékelő a hőt, így a vezérlő túlmelegedést vagy fűtésképtelenséget láthat, amikor egyik sem igaz.</li>
+<li><strong>A blokk túlhőszik.</strong> A leszigetelt fém a tervezett üzemi hőfok fölött dolgozik, és ez terheli a védelmére bekötött hőbiztosítékokat. A vízkőtől tömötté vált termoblokk cseredarab, nem tisztítandó alkatrész — Juránál €90–€180 azért a vízkőért, amit egy üveg mészetlenítő szer eltávolított volna.</li>
+</ul>
+<h2>Mit tesz a vízkő a szelepekkel és a keskeny nyílásokkal?</h2>
+<p>A második károsodási hely minden, ami szűk. A motoros kerámiaszelepes Jura gépeknél a vízkő megmerevíti a tárcsát, amíg az nem éri el a vezérlőelektronika által parancsolt helyzetet — pontosan ezt jelenti a <a href="https://hu.codefixcoffee.com/jura/automatic-machines/error-6/">6-os hiba</a>, és ezért az első, ingyenes lépés a javításában a teljes mészetlenítés. A szűk beömlők ugyanígy tömődnek: a <a href="https://hu.codefixcoffee.com/philips-saeco/espresso-machines/error-05/">Philips 05-ös hiba</a> azért maradhat fenn a töltés után, mert a bekövesedett beömlő mellett a szivattyú egyszerűen nem tud vizet szívni. A szintszabályozók sem mentesek: a tartályúszón ülő vízkő a klasszikus oka a telt tartály mellett kiírt „töltse fel a víztartályt” üzenetnek. A bekövesedett áramlásérzékelő pedig abbahagyja a számolást — így <a href="https://hu.codefixcoffee.com/delonghi/magnifica-dinamica/descale-light-stays-on-after-descaling/">marad fel sok De'Longhin a mészetlenítés-lámpa a mészetlenítés után</a>: a gép nem regisztrálta a lefuttatott ciklust.</p>
+<h2>Miért rossz választás az ecet egyes gépeknél?</h2>
+<p>A háztartási ecet ecetsav, és kávégéphez három baj van vele. Gyenge, tehát hosszú érintkezés kell neki, hogy egy szűk csatornában összeállt vízkőt meglágyítsa. Megtámadja a krómozott sárgaréz szerelvényeket, és duzzasztja egyes gumitömítéseket. És a szaga sok öblítés után is ott ül a műanyag csövekben. A Nespresso egyértelmű a következményről — ne mészetlenítsen ecettel, mert károsítja a vízkört, és elveszíti a gyártói segítséget —, amire érdemes emlékezni, amikor a <a href="https://hu.codefixcoffee.com/nespresso/vertuo-machines/blinking-lights/">Vertuo narancs villogása</a> a mészetlenítő rutin felé tereli; a <a href="https://www.nespresso.com">Nespresso hivatalos honlapja</a> ezt kifejezetten így közli. Egy vízforralónál? Az ecettel nincs baj. Egy gépnél, amelynek szivattyúja, szelepe és garanciája van? Használjon valódi mészetlenítőt.</p>
+<h2>Citromsav vagy tejsav?</h2>
+<p>A kereskedelmi mészetlenítők szinte kivételül az alábbi két élelmiszer-biztonságos sav egyikére épülnek:</p>
+<ul>
+<li><strong>Citromsav</strong> — porként kapható, €3–€6-ért egy évig elegendő adag; erős és gyors a vastag vízkőn. A legtöbb univerzális szer alapja, és jól kiöblítve nem hagy maga után semmit.</li>
+<li><strong>Tejsav</strong> — enyhébb és csaknem szagtalan, a márkás palackok gyakori alapanyaga. Kíméletesebb a tömítésekhez és a bevonatokhoz, cserébe kissé hosszabb érintkezési idő kell ugyanannyi vízkőhöz.</li>
+</ul>
+<p>Mindkettő megfelel, ha a gép saját mészetlenítő programjában futtatja. A lényeg a végigvitele: az emlékeztető számlálók csak a mészetlenítő menüből, kifolyóval felszerelve és az öblítő fázissal együtt lefuttatott ciklust regisztrálják. Ha idő előtt leállítja, vagy kancsóból improvizál, <a href="https://hu.codefixcoffee.com/delonghi/magnifica-dinamica/descale-light-stays-on-after-descaling/">a lámpa fel is marad</a>. Hivatalos szerekről és leírásokról a <a href="https://www.delonghi.com">De'Longhi támogatási oldala</a> is szolgál információval.</p>
+<h2>Milyen gyakran? A vízétől függ.</h2>
+<p>A gépek emlékeztetői jellemzően mennyiségen alapulnak — lefőzött csészék, átpumpált liter —, nem keménységen, ezért a kemény vizes háztartásoknak a lámpa felvillanása előtt kell mészetleníteniük. Egy gyakorlati mérce:</p>
+<ul>
+<li><strong>Puha víz</strong> (kb. 7 °dH, azaz 125 ppm alatt): elég a gép saját emlékeztetője, a gyakorlatban 3–6 havonta.</li>
+<li><strong>Közepesen kemény</strong> (7–14 °dH): 2–3 havonta.</li>
+<li><strong>Kemény</strong> (14 °dH felett): nagyjából havonta, és még korábban, ha az áramlás lassul vagy a szivattyú hangosodik.</li>
+</ul>
+<p>Egy csomag keménységteszt-csík €5–€10, a vízszolgáltató pedig közzéteszi a térségre érvényes értéket. A késői jelek márkától függetlenül egyeznek: lassú, vékony sugár, hangosodó szivattyú, hűlőbb kávé — és a végén a fenti kódok. Mészetlenítsen ütemezés szerint, és e kódok többsége sosem következik be; egy €10-es palack a legolcsóbb javítás, amit ez az oldal valaha ajánl.</p>
+<h3>Magyarországi vízkeménység</h3>
+<p>Magyarország ivóvize nagy részen kemény, sok helyen nagyon kemény, így itthon a fenti skálán jellemzően a 14 °dH feletti sáv a reális, és a havonta-kéthavonta végzett mészetlenítés a biztonságos. A pontos értéket a helyi vízmű közzétett ivóvíz-minőségi adataiból lehet kiolvasni — a Budapesti Vízművek például nyilvánosságra hozza a keménységi adatokat. Ahol különösen kemény a víz, ott érdemes megfontolni az ülepítős szűrőkancsó használatát a tartályba töltött víznél.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
