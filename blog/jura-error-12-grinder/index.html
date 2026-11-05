@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Jura Error 12: kavics akadt a darálóban"</title>
+<meta name="description" content=""A Jura Error 12 azt jelzi, hogy a daráló nem forog — jellemzően kavics szorult a korongok közé. Így távolítható el az akadály."">
+<link rel="canonical" href="https://hu.codefixcoffee.com/blog/jura-error-12-grinder/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/jura-error-12-grinder/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/jura-error-12-grinder/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Vissza a főoldalra</a></span></div></header>
+<main>
+<h1>"Jura Error 12: kavics akadt a darálóban"</h1>
+<p class="meta">2026-11-05</p>
+<p>Amikor egy Jura kijelzőjén Error 12 jelenik meg, a hiba oka szó szerint kézzel fogható: valami olyan került a babok közé, ami oda nem való. A vezérlőelektronika kiadta az őrlési parancsot, a daráló mégsem mozdult. Két darálós GIGA gépeken a kód kifejezetten a bal oldali darálót nevezi meg. A gyakorlatban a kiváltó ok szinte mindig idegen tárgy — klasszikusan egy apró, betakarításkor a babok közé keveredett kavics —, amely a darálókorongok közé ékelődik. A részleteket a <a href="https://hu.codefixcoffee.com/jura/automatic-machines/error-12/">teljes Error 12 referencia</a> tartalmazza; ez a bejegyzés arról szól, hogyan juthatunk hozzá az akadályhoz, és mikor merül fel, hogy a hiba sokkal több egy kavicsnál.</p>
+<h2>Mit mond valójában a kód</h2>
+<p>A Jura az E, ENA, S, J, Z és GIGA sorozatokban közös, számozott hibalistát használ, és a 12-es a darálóhoz tartozik: a motor beragadt, vagy a korongok nem tudnak szabadon fordulni. A súlyosság közepes, a javítás mérsékelten barkácsolóbarát — több, mint egy cseppgyűjtő kiürítése, de ha tényleg beszorulásról van szó, és nem elhalt motorról, a ház felnyitása nélkül is gyógyítható.</p>
+<p>A GIGA-kérdés pedig számít: ezekben a gépekben két daráló dolgozik, és az Error 12 a <strong>bal</strong> oldalit jelöli, így nem találgatni kell, melyiket vizsgáld meg először.</p>
+<h2>A szokásos tettes: kavics a babban</h2>
+<p>A kávé mezőgazdasági termék: előfordul, hogy egy apró kavics túléli a betakarítást és a válogatást, és bekerül egy zsák babba. Ami elég kicsi ahhoz, hogy átcsússzon az adagoló kifolyóján, pontosan akkora, hogy a két korong közé ékelődjön — a daráló az első érintkezésnél megáll. A sötét pörköletből időnként kialakuló, összetapadt darabkák ugyanígy gátolhatják a mechanizmust. Mindkét esetben a hiba mechanikai, nem elektronikai: nem a vezérlőelektronikával van baj, hanem ki kell szedni az akadályt.</p>
+<h2>A második ok: az olajos finomságokra beragadt motor</h2>
+<p>A másik dokumentált ok látványtalanabb, de többe kerül. Az öreg, olajos kávéfinomságok — a porszerű szemcsék, amelyeket a sötét pörköletek hullatnak — idővel kitömik a darálót, és a motor egyszerűen ráragad. A jel árulkodó: kiürítetted az adagolót, kiporszívóztad a garatot, a daráló mégis csak <strong>zümmög, de nem forog</strong>. Ha az út szabad, és a motor álló helyzetből mégsem indul, akkor a motor beragadt, és cserére szorul.</p>
+<h2>A GIGA 6 kivétel</h2>
+<p>Mielőtt bármihez nyúlsz, egy fontos kivétel: a GIGA 6 esetében ugyanez az Error 12 kommunikációs vagy érzékelőhibára is utalhat, nem csak beszorulásra — ezt egy egyszerű újraindítással lehet elsőként kizárni. Ezért minden 12-es kódnál, típustól függetlenül, az első lépés a legolcsóbb: húzd ki a gépet, várj, indítsd újra.</p>
+<h2>Elhárítás lépésről lépésre</h2>
+<ol>
+<li>Húzd ki a gépet öt percre, majd indítsd újra — GIGA 6 esetén önmagában ez is törölheti a kommunikációs hiba változatot.</li>
+<li>Ürítsd ki teljesen a babadagolót, és nézd át az aljára került babokat: kavicsokat vagy összetapadt pörköletdarabokat keresve. Ha kavics akad a kezedbe, valószínűleg megtaláltad a hiba teljes okát.</li>
+<li>Porszívózd ki szűk fúvókával az adagoló kifolyóját és a daráló garatját. Semmi fémet ne dugj a korongok közé: a karcolt darálókorong-készlet felesleges kiadás.</li>
+<li>Ürítsd ki a zacctartót és a cseppgyűjtőt, tedd vissza mindkettőt, majd indítsd újra a gépet, hogy vissza tudja állítani magát a kiinduló helyzetbe.</li>
+<li>Főzz egy kávét. Ha a daráló forog, megszűnt a blokkolás; ha az út már szabad, mégis csak zümmög, a motor beragadt, és cserélni kell.</li>
+</ol>
+<h2>Mibe kerül</h2>
+<ul>
+<li><strong>Darálómotor:</strong> típus szerint 60–140 €.</li>
+<li><strong>Darálókorong-készlet:</strong> 25–45 €, ha a beszorulás rongálta meg a korongokat.</li>
+<li><strong>Műhelyi javítás:</strong> egy szuperautomata garancián kívüli gyártói szervizelése jellemzően 250–500 € a visszaszállítással együtt; egylakatrészes munkáknál a független kávégép-javítók általában olcsóbbak.</li>
+</ul>
+<p>A korong- vagy motorexcsere egy GIGA-ban komoly szétszereléssel jár, ezért inkább műhelymunka, hacsak nem szervizelsz rendszeresen ilyen gépeket. A gyártói szolgáltatásokról a <a href="https://www.jura.com/hu/">Jura hivatalos honlapja</a> tájékoztat. GIGA és Z gépeknél a javítás általában megéri; egy régebbi, kisebb modellnél mérlegeld az árajánlatot a gép értékével.</p>
+<h3>Magyarországi praktikus tudnivalók</h3>
+<p>Itthon az új gépekre két év kötelező jótállás jár, ezért garanciális időben ne vedd fel a gép házát: a hálózat kihúzása, az adagoló kiürítése és a porszívózás nem minősül beavatkozásnak, a szétszerelés viszont elveszítheti a jótállást. Ha a tünetek motorberagadásra utalnak, fordulj a forgalmazóhoz vagy a gyártó magyarországi szervizpartnereihez árajánlatért. Mivel a hiba tisztán mechanikai, a hazai kemény csapvíz itt nem szerepel az okok között: a vízkő a fűtő- és szelephibák mögött áll, nem a 12-es mögött.</p>
+<h2>A hiba után</h2>
+<p>Tegyél szokássá, hogy egy új zsák vagy egy új pörkölő első adagját átnézed, mielőtt az adagolóba töltöd — ekkor köt ki a legtöbb kavics. Az Error 12 megelőzése egyetlen mondatban: pillantsd át a babokat, mielőtt újratöltöd.</p>
+<h2>Kapcsolódó kódok</h2>
+<p>Az Error 12 a Jura mechanikai hibacsaládjába tartozik, a főzőegység ciklushibáját jelző <a href="https://hu.codefixcoffee.com/jura/automatic-machines/error-8/">Error 8</a> mellé, amely a barátságosabbik rokon: egy tisztítótáblás program jellemzően megoldja. Ugyanez a kavics-logika márkákon is átível: a De'Longhi gépek a beragadt darálót rejtett 1454-es kódként naplózzák, és a <a href="https://hu.codefixcoffee.com/delonghi/magnifica-dinamica/grinder-stuck-code-1454/">beragadt daráló (1454) összefoglaló</a> ugyanezt a kiürítés-porszívózás eljárást írja le Magnifica és Dinamica tulajdonosoknak. Ennek az üzenetcsaládnak a többi tagja a <a href="https://hu.codefixcoffee.com/delonghi/">De'Longhi rovatban</a> található; a Jura teljes számozott listája — a termoblokk-fűtő kódoktól a kerámia szelepig — a <a href="https://hu.codefixcoffee.com/jura/">Jura hibakód-összesítőben</a> érhető el.</p>
+</main>
+<footer>Javítási útmutatók és hibakód-magyarázatok a codefixcoffee.com-ról.</footer>
+</body></html>
